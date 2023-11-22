@@ -1,0 +1,19 @@
+= Bean Refresher Demo
+:toc:
+:sectnums:
+
+== Synopsis
+
+This project is a small and simple demo project to show how to partially refresh the Spring Bean Container.
+
+Execute:
+[source,bash]
+----
+curl -X POST http://localhost:8080/actuator/refresh \
+    --header 'Content-Type: application/json' \
+    --data '{ "type" : "ADD" }'
+
+curl -X POST http://localhost:8080/actuator/refresh \
+    --header 'Content-Type: application/json' \
+    --data '{ "type" : "MULT" }'
+----
